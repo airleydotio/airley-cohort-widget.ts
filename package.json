@@ -1,0 +1,46 @@
+{
+  "name": "airley-cohort-widget",
+  "version": "1.0.0",
+  "description": "A widget for the Airley cohort",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch",
+    "build": "npm run webpack",
+    "webpack": "webpack --mode=production",
+    "lint:fix": "prettier --write \"src/**/*.{js}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bookhookapp/airley-cohort-widget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bookhookapp/airley-cohort-widget/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.6.0",
+    "prettier": "latest",
+    "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
+    "tailwindcss": "^3.0.24",
+    "terser-webpack-plugin": "latest",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "homepage": "https://github.com/bookhookapp/airley-cohort-widget#readme"
+}

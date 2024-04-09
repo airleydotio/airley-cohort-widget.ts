@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airley Cohort Card</title>
+    <style>
+      .cohort-card {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Paste this in your html -->
+    <div class="cohort-card"></div>
+    <script src="./dist/airley.js"></script>
+    <script>
+      const Cohort = Airley.default
+      const cohort = new Cohort({
+        size: 'large',
+        cohort: 'dj-wale-babu',
+        container: '.cohort-card',
+      })
+      ;(async () => {
+        await cohort.fetch()
+        cohort.render()
+      })()
+    </script>
+    <!--ends here -->
+  </body>
+</html>
