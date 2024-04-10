@@ -19,7 +19,9 @@ class LargeWidget extends Widget {
             {
               type: 'img',
               attrs: {
-                src: this.cohort.profile.cover_photo.url,
+                src:
+                  this.cohort?.profile?.cover_photo?.url ||
+                  'https://api.dicebear.com/8.x/pixel-art/svg',
                 class: 'h-full w-full object-cover',
                 alt: '',
               },
