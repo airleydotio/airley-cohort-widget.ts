@@ -14,7 +14,7 @@ class LargeWidget extends Widget {
       children: [
         {
           type: 'div',
-          attrs: { class: 'grid' },
+          attrs: { class: 'flex flex-col divide-y' },
           children: [
             {
               type: 'img',
