@@ -52,8 +52,6 @@ export default class CohortCard {
     const { results: cohort } = await cohortRequest.json()
     const { count } = await countRequest.json()
 
-    console.log(cohort, 'cohort')
-
     that.cohort = new Cohort({
       ...(cohort && cohort[0]),
       enrollments: count,

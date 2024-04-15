@@ -29,7 +29,7 @@ class LargeWidget extends Widget {
             },
             {
               type: 'div',
-              attrs: { class: 'h-full w-full bg-[#F1FBF3] px-3 py-4' },
+              attrs: { class: 'w-full bg-[#F1FBF3] px-3 py-4' },
               children: [
                 {
                   type: 'span',
