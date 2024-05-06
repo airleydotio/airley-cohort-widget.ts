@@ -38,10 +38,10 @@ export default class CohortCard {
     const that = this
     let [countRequest, cohortRequest] = await Promise.all([
       fetch(
-        `http://localhost:8000/api/enrollments/count/${this.options.cohort}`,
+        `https://pre-api.airley.io/api/enrollments/count/${this.options.cohort}`,
       ),
       fetch(
-        `http://localhost:8000/api/cohort/is-slug-unique/${this.options.cohort}`,
+        `https://pre-api.airley.io/api/cohort/is-slug-unique/${this.options.cohort}`,
       ),
     ])
 
