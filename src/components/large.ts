@@ -9,12 +9,12 @@ class LargeWidget extends Widget {
       type: 'div',
       attrs: {
         id: 'large',
-        class: 'grid w-full rounded-lg bg-[#F1FBF3] shadow-sm sm:grid-cols-2',
+        class: 'grid max-h-full w-full rounded-lg bg-[#F1FBF3] shadow-sm sm:grid-cols-2',
       },
       children: [
         {
           type: 'div',
-          attrs: { class: 'flex flex-col divide-y' },
+          attrs: { class: 'grid grid-rows-1fr max-h-full divide-y' },
           children: [
             {
               type: 'img',
@@ -22,7 +22,7 @@ class LargeWidget extends Widget {
                 src:
                   this.cohort?.profile?.cover_photo?.url ||
                   'https://api.dicebear.com/8.x/pixel-art/svg',
-                class: 'h-full w-full object-cover',
+                class: 'max-h-full w-full object-cover',
                 alt: '',
               },
               children: [],
@@ -49,7 +49,7 @@ class LargeWidget extends Widget {
         },
         {
           type: 'div',
-          attrs: { class: 'grid bg-white p-4 py-6' },
+          attrs: { class: 'grid max-h-full bg-white p-4 py-6' },
           children: [
             {
               type: 'div',
@@ -93,7 +93,7 @@ class LargeWidget extends Widget {
                 },
                 {
                   type: 'div',
-                  attrs: { class: 'grid gap-8 rounded-t-lg bg-white p-5' },
+                  attrs: { class: 'flex flex-col justify-between rounded-t-lg bg-white p-5' },
                   children: [
                     {
                       type: 'div',

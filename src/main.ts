@@ -22,7 +22,10 @@ class Cohort {
 export default class CohortCard {
   private readonly options: CohortOptions
   private cohort: Cohort
+  private readonly baseUrl: string
+
   constructor(options: CohortOptions) {
+    // @ts-ignore
     this.options = Object.assign(
       {},
       {
@@ -31,6 +34,8 @@ export default class CohortCard {
       },
       options,
     )
+    // @ts-ignore
+    this.baseUrl = airley_base || 'https://pre-api.airley.io/api'
     this.cohort = new Cohort()
   }
 
@@ -38,10 +43,10 @@ export default class CohortCard {
     const that = this
     let [countRequest, cohortRequest] = await Promise.all([
       fetch(
-        `https://pre-api.airley.io/api/enrollments/count/${this.options.cohort}`,
+        `${this.baseUrl}/enrollments/count/${this.options.cohort}`,
       ),
       fetch(
-        `https://pre-api.airley.io/api/cohort/is-slug-unique/${this.options.cohort}`,
+        `${this.baseUrl}/cohort/is-slug-unique/${this.options.cohort}`,
       ),
     ])
 

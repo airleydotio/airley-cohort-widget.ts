@@ -58,7 +58,7 @@ class MediumWidget extends Widget {
                 },
                 {
                   type: 'div',
-                  attrs: { class: 'grid gap-8 rounded-t-lg bg-white p-5' },
+                  attrs: { class: 'flex flex-col justify-between rounded-t-lg bg-white p-5' },
                   children: [
                     {
                       type: 'div',
