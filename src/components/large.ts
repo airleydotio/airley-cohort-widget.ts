@@ -9,12 +9,13 @@ class LargeWidget extends Widget {
       type: 'div',
       attrs: {
         id: 'large',
-        class: 'grid max-h-full w-full rounded-lg bg-[#F1FBF3] shadow-sm sm:grid-cols-2',
+        class:
+          'grid max-h-full grid-rows-1 w-full rounded-lg bg-[#F1FBF3] shadow-sm sm:grid-cols-2',
       },
       children: [
         {
           type: 'div',
-          attrs: { class: 'grid grid-rows-1fr max-h-full divide-y' },
+          attrs: { class: 'grid grid-rows-1 max-h-full divide-y' },
           children: [
             {
               type: 'img',
@@ -93,7 +94,10 @@ class LargeWidget extends Widget {
                 },
                 {
                   type: 'div',
-                  attrs: { class: 'flex flex-col justify-between rounded-t-lg bg-white p-5' },
+                  attrs: {
+                    class:
+                      'flex flex-col justify-between rounded-t-lg bg-white p-5',
+                  },
                   children: [
                     {
                       type: 'div',
