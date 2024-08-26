@@ -40,3 +40,12 @@ export function formatAmount(amount: number, currency: string): string {
     maximumSignificantDigits: 3,
   }).format(amount)
 }
+
+export const isEmpty = (value: any): boolean => {
+  return value === null || value === undefined || value === ''
+}
+
+export function isDevMode(): string | null {
+  const localApi = localStorage.getItem('localAPI')
+  return !isEmpty(localApi) ? localApi : null
+}

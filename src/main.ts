@@ -6,6 +6,7 @@ import LargeWidget from './components/large'
 import MediumWidget from './components/medium'
 import BannerWidget from './components/banner'
 import './styles/main.css'
+import { isDevMode } from './utilities'
 
 class Cohort {
   constructor(
@@ -35,19 +36,15 @@ export default class CohortCard {
       options,
     )
     // @ts-ignore
-    this.baseUrl = airley_base || 'https://pre-api.airley.io/api'
+    this.baseUrl = isDevMode() ?? 'https://pre-api.airley.io/api'
     this.cohort = new Cohort()
   }
 
   async fetch() {
     const that = this
     let [countRequest, cohortRequest] = await Promise.all([
-      fetch(
-        `${this.baseUrl}/enrollments/count/${this.options.cohort}`,
-      ),
-      fetch(
-        `${this.baseUrl}/cohort/is-slug-unique/${this.options.cohort}`,
-      ),
+      fetch(`${this.baseUrl}/enrollments/count/${this.options.cohort}`),
+      fetch(`${this.baseUrl}/cohort/is-slug-unique/${this.options.cohort}`),
     ])
 
     if (countRequest.status !== 200 || cohortRequest.status !== 200) {
