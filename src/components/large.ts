@@ -22,7 +22,7 @@ class LargeWidget extends Widget {
               attrs: {
                 src:
                   this.cohort?.profile?.cover_photo?.url ||
-                  'https://api.dicebear.com/8.x/pixel-art/svg',
+                  'https://cdn.prod.website-files.com/6702c6b3ae16dd209ddcee54/673b00a1d6479d2b286ac622_OG.png',
                 class: 'max-h-full w-full object-cover',
                 alt: '',
               },
